@@ -1,0 +1,46 @@
+<!-- 
+nota1:
+con la clase row formamos las grillas las cuales son 12
+con la clase col defino cuantas columnas de esa grilla ocupa cada DIV
+EJEMPLO:
+el primer DIV de la imagen en xs ocupa las 12 col y abajo sigue el segundo DIV y despues el tercero
+pero con SM el primer DIV (que contiene la imagen) ocupa 2 (12 col - 2 col = 10 col libres) despues el segundo DIV ocupa 2 col (10 col - 2 col = 8 col libres) y el ultimo DIV le asigno las ultimas 8 restante
+
+nota2:
+no es necesario asignar todas las columnas
+
+nota3:
+con la clase img-fluid las imagenes se vuelven resposives es decir que se adaptan al tamaño de pantalla
+-->
+
+<div class="row">
+   <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+       <img src="../../../assets/perfil.jpg" class="img-fluid" id="fotoDePerfil">
+   </div>
+
+   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+           <div >
+               <p id="nombre">Mario Daniel Cena</p>
+               <p>Futuro Full Stack Development Jr</p>
+          </div>
+   </div>
+   
+   <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+     <div >
+         <span>
+                <h1>Acerca de Mi</h1>
+            <p>
+                Tengo 38 años, actualmente me encuentro en búsqueda laboral.
+                Administrativo con más de 10 años de experiencia, a lo largo de mi carrera
+                 he pasado por todo tipo de organizaciones: gestionando, planificando, atendiendo y
+                realizando tareas administrativas, de soporte y de apoyo a cualquier empresa.<br>
+                Soy capaz de desempeñar mis funciones eficientemente en prácticamente cualquier
+                departamento de la empresa.
+              </p>
+         </span>
+    </div>
+
+
+
+
+</div>

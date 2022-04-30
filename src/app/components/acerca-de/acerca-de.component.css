@@ -1,0 +1,30 @@
+/*a todo el contenedor le doy una separacion de 20px*/ 
+.row {
+     padding: 20px;
+}
+
+/*a los div les doy un color de fondo y alineacin central*/
+
+div {
+    background-color: grey; /*color de fonfo no me gusta ver*/
+    text-align: center;
+}
+
+/*etiqueta nombre*/
+
+#nombre{
+      font-weight: bold;
+      margin-top: 20%;
+      font-size: 25px
+}
+
+/*estilo foto de  perfil*/
+@media(min-width: 576px){
+#fotoDePerfil{
+    
+    
+    border-radius: 50%; 
+    
+  
+}
+}
