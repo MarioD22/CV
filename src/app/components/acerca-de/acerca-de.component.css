@@ -1,6 +1,7 @@
 /*a todo el contenedor le doy una separacion de 20px*/ 
 .row {
      padding: 20px;
+     width: 100%;
 }
 
 /*a los div les doy un color de fondo y alineacin central*/

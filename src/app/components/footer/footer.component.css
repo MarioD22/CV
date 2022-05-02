@@ -1,0 +1,11 @@
+.row {width: 100%;}
+
+footer{
+    background-color: grey;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   border-radius: 50px;
+   position: relative;
+ left: 11px;
+}
