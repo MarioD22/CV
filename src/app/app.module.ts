@@ -8,9 +8,16 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 
+
+import { AppRoutingModule } from './app-routing.module';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ListaPersonasComponent } from './components/lista-personas/lista-personas.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -23,10 +30,14 @@ import { FooterComponent } from './components/footer/footer.component';
     ExperienciaComponent,
     HysComponent,
     FooterComponent,
+    ListaPersonasComponent,
     
   ],
   imports: [
+    
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
     NgCircleProgressModule.forRoot({ })
   ],
   providers: [],

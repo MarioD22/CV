@@ -1,0 +1,24 @@
+<h2>app-lista-personas</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th> 
+            <th> nombre </th>
+            <th> apellido </th>
+            <th> edad </th>
+            <th> email </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let u of Personas"><!--es el arreglo declarado en el lista de personas.ts-->
+                <!-- declaro la variable "u" creo un blucle for que recorre el arreglo Personas-->
+            <!-- {{}} Es interpolación para acceder a los campos -->
+            <td>{{u.id}}</td>
+            <td>{{u.nombre}}</td>
+            <td>{{u.mail}}</td>
+            <td>{{u.edad}}</td>
+            <td>{{u.apellido}}</td>            
+        </tr>
+    </tbody>
+</table>
+
