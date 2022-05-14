@@ -16,7 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ListaPersonasComponent } from './components/lista-personas/lista-personas.component';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { CrearCapacitacionComponent } from './components/crear-capacitacion/crear-capacitacion.component';
+import { FormsModule} from '@angular/forms';
 
 
 
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     HysComponent,
     FooterComponent,
     ListaPersonasComponent,
+    CrearCapacitacionComponent,
     
   ],
   imports: [
@@ -38,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({ })
   ],
   providers: [],

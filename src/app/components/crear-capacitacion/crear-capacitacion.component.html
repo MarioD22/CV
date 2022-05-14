@@ -1,0 +1,23 @@
+<h3>Agregar Capacitacion</h3>
+
+<form (ngSubmit) = "onSubmit()">
+       
+    <div class="form-group">
+        <label> Nombre de la Capacitacion</label>
+
+        <input type="text" class ="form-control" id = "nombre"
+        [(ngModel)] = "nuevaCapacitacion.nombre" name = "nombre">
+    </div>
+
+    <div class="form-group">
+        <label>Lugar de la Capacitacion</label>
+        
+        <input type="text" class ="form-control" id = "lugar"
+            [(ngModel)] = "nuevaCapacitacion.lugar" name = "lugar">
+    </div>
+    <button class = "btn btn-success" type ="submit">Guardar</button>
+
+
+
+
+</form>    
