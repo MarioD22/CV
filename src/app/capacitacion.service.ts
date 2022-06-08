@@ -9,7 +9,7 @@ import { capacitacion } from './capacitacion';
 export class CapacitacionService { 
 
 
-  private backendURL: string = "http://localhost:8080/api/v1/capacitacion";
+  private backendURL: string = "http://localhost:8080/api/v1";
  
 
 
@@ -19,27 +19,31 @@ export class CapacitacionService {
     private httpClient: HttpClient  ){ }
 
     findAllCapacitacion(): Observable<capacitacion[]>{
-      return this.httpClient.get<capacitacion[]>(`${this.backendURL}`);
+      return this.httpClient.get<capacitacion[]>(`${this.backendURL}/capacitacion`);
     }
 
     
   getCapacitacionById(id: number): Observable<capacitacion>{
     return this.httpClient.get<capacitacion>(`${this.backendURL}/${id}`);
   }
+   
 
+  public addCapacitacion( capacitacion:capacitacion): Observable<capacitacion>{ 
+    return this.httpClient.post<capacitacion>(`${this.backendURL}/new/capacitacion`,capacitacion);
+  } 
   //POST creo la variable capacitacion del tipo capacitacion
   createCapacitacion(capacitacion: capacitacion): Observable<Object>{
-    return this.httpClient.post(`${this.backendURL}`, capacitacion);
+    return this.httpClient.post(`${this.backendURL}/new/capacitacion`,capacitacion);
   }
 
   //PUT
   updateCapacitacion(id: number, capacitacion: capacitacion): Observable<Object>{
-    return this.httpClient.put(`${this.backendURL}/${id}`, capacitacion);
+    return this.httpClient.put(`${this.backendURL}/edit/capacitacion/${id}`, capacitacion);
   }
 
   //DELETE
   deleteCapacitacin(id: number): Observable<Object>{
-    return this.httpClient.delete(`${this.backendURL}/${id}`);
+    return this.httpClient.delete(`${this.backendURL}/delete/capacitacion/${id}`);
   }
   
 

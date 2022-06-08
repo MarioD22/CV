@@ -5,3 +5,4 @@ export class Persona {
      edad:string    ;
      mail:string;
 }
+

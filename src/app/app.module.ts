@@ -14,10 +14,14 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ListaPersonasComponent } from './components/lista-personas/lista-personas.component';
+import { LoginComponent } from './components/login/login.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CrearCapacitacionComponent } from './components/crear-capacitacion/crear-capacitacion.component';
 import { FormsModule} from '@angular/forms';
+import { ListaCapacitacionComponent } from './components/lista-capacitacion/lista-capacitacion.component';
+import { ActualizarCapacitacionComponent } from './components/actualizar-capacitacion/actualizar-capacitacion.component';
+
 
 
 
@@ -33,6 +37,9 @@ import { FormsModule} from '@angular/forms';
     FooterComponent,
     ListaPersonasComponent,
     CrearCapacitacionComponent,
+    LoginComponent,
+    ListaCapacitacionComponent,
+       ActualizarCapacitacionComponent  
     
   ],
   imports: [

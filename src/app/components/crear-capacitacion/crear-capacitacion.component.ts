@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { capacitacion } from 'src/app/capacitacion';
 import { CapacitacionService } from 'src/app/capacitacion.service';
-/*import { Router } from '@angular/router';*/
 
 @Component({
   selector: 'app-crear-capacitacion',
@@ -11,7 +10,8 @@ import { CapacitacionService } from 'src/app/capacitacion.service';
 
 export class CrearCapacitacionComponent implements OnInit {
 
-  nuevaCapacitacion = new capacitacion();
+ 
+  nuevaCapacitacion: capacitacion = new capacitacion();
 
   constructor(private capaService: CapacitacionService ) { }
 
@@ -20,21 +20,31 @@ export class CrearCapacitacionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  saveCapacitacion(){
-    this.capaService.createCapacitacion(this.nuevaCapacitacion).subscribe( data =>{
-      console.log(data);
-      
-    },
-    error => console.log(error));
-  }
-
-  
 
 
-
-  onSubmit(){
-    console.log(this.nuevaCapacitacion);
+  onSubmitForm(){
     this.saveCapacitacion();
   }
+
+  saveCapacitacion(){
+    this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe(data =>console.log(data));
+    
+  }
+
+
+/*
+  guardar(){
+  
+  this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe(data =>console.log(data));
+   
+  saveCapacitacion(){
+    this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe(  
+      data =>{   console.log(data); },
+    error => console.log(error));
+  }
+  }*/
+
+
+
 
 }
