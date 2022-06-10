@@ -1,5 +1,11 @@
 export class capacitacion {
     id: number;
-    nombre:string ;
-    lugar:string ; 
+    nombre?:string ;
+    lugar?:string ; 
+    
+    constructor() {
+       
     }
+   
+
+}

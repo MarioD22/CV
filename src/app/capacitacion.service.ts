@@ -9,7 +9,7 @@ import { capacitacion } from './capacitacion';
 export class CapacitacionService { 
 
 
-  private backendURL: string = "http://localhost:8080/api/v1";
+  private backendURL: string = "http://localhost:8080/api/v1/capacitacion";
  
 
 
@@ -19,31 +19,32 @@ export class CapacitacionService {
     private httpClient: HttpClient  ){ }
 
     findAllCapacitacion(): Observable<capacitacion[]>{
-      return this.httpClient.get<capacitacion[]>(`${this.backendURL}/capacitacion`);
+      return this.httpClient.get<capacitacion[]>(`${this.backendURL}`);
     }
 
-    
-  getCapacitacionById(id: number): Observable<capacitacion>{
-    return this.httpClient.get<capacitacion>(`${this.backendURL}/${id}`);
-  }
-   
+    // http://localhost:8080/api/v1/capacitacion/findById/2 //
 
-  public addCapacitacion( capacitacion:capacitacion): Observable<capacitacion>{ 
-    return this.httpClient.post<capacitacion>(`${this.backendURL}/new/capacitacion`,capacitacion);
-  } 
-  //POST creo la variable capacitacion del tipo capacitacion
-  createCapacitacion(capacitacion: capacitacion): Observable<Object>{
-    return this.httpClient.post(`${this.backendURL}/new/capacitacion`,capacitacion);
+  getCapacitacionById(id: number): Observable<capacitacion>{
+    return this.httpClient.get<capacitacion>(`${this.backendURL}/findById/+${id}`);
   }
+  
+
+ //POST
+  public addCapacitacion( capacitacion:capacitacion): Observable<capacitacion>{ 
+    return this.httpClient.post<capacitacion>(`http://localhost:8080/api/v1/new/capacitacion`,capacitacion);
+  } 
+ 
 
   //PUT
+  //http://localhost:8080/api/v1/capacitacion/edit/{id}//
   updateCapacitacion(id: number, capacitacion: capacitacion): Observable<Object>{
-    return this.httpClient.put(`${this.backendURL}/edit/capacitacion/${id}`, capacitacion);
+    return this.httpClient.put(`${this.backendURL}/edit/${id}`, capacitacion);
   }
 
   //DELETE
+  //http://localhost:8080/api/v1/capacitacion/delete/{id} //
   deleteCapacitacin(id: number): Observable<Object>{
-    return this.httpClient.delete(`${this.backendURL}/delete/capacitacion/${id}`);
+    return this.httpClient.delete(`${this.backendURL}/delete/${id}`);
   }
   
 

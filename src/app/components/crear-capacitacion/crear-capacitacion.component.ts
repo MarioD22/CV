@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { capacitacion } from 'src/app/capacitacion';
 import { CapacitacionService } from 'src/app/capacitacion.service';
 
@@ -13,7 +14,8 @@ export class CrearCapacitacionComponent implements OnInit {
  
   nuevaCapacitacion: capacitacion = new capacitacion();
 
-  constructor(private capaService: CapacitacionService ) { }
+  constructor(private capaService: CapacitacionService ,
+    ) { }
 
   
 
@@ -29,22 +31,7 @@ export class CrearCapacitacionComponent implements OnInit {
   saveCapacitacion(){
     this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe(data =>console.log(data));
     
-  }
-
-
-/*
-  guardar(){
-  
-  this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe(data =>console.log(data));
-   
-  saveCapacitacion(){
-    this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe(  
-      data =>{   console.log(data); },
-    error => console.log(error));
-  }
-  }*/
-
-
+  }  
 
 
 }

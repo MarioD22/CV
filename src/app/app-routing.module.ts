@@ -12,20 +12,9 @@ const routes: Routes = [
   {path:'lista-personas', component: ListaPersonasComponent},
   {path:'',redirectTo:'lista-capacitacion', pathMatch:'full' },
   {path:'crear-capacitacion', component:CrearCapacitacionComponent},
-  {path:'actualizar-capacitacion/:id', component: ActualizarCapacitacionComponent} 
-  
+  {path: 'updatecapacitacion/:id', component:ActualizarCapacitacionComponent}
 ];
-/*
-const routes: Routes = [
-  {path: 'userlist', component: UserListComponent},
-  //Por defecto, redirigimos a la lista de usuarios
-  {path: '', redirectTo: 'userlist', pathMatch: 'full'},
-  {path: 'createuser', component: CreateUserComponent},
-  {path: 'searchuser', component: SearchUserComponent},
-  {path: 'updateuser/:id', component: UpdateUserComponent},
-  {path: 'userdetails/:id', component: UserDetailsComponent},
-  {path: 'about', component: AboutComponent}
-];*/
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],                                                                                                                                                                                                                                                                                                          

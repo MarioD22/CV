@@ -23,8 +23,6 @@ import { ListaCapacitacionComponent } from './components/lista-capacitacion/list
 import { ActualizarCapacitacionComponent } from './components/actualizar-capacitacion/actualizar-capacitacion.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +37,7 @@ import { ActualizarCapacitacionComponent } from './components/actualizar-capacit
     CrearCapacitacionComponent,
     LoginComponent,
     ListaCapacitacionComponent,
-       ActualizarCapacitacionComponent  
-    
+    ActualizarCapacitacionComponent    
   ],
   imports: [
     
@@ -48,7 +45,8 @@ import { ActualizarCapacitacionComponent } from './components/actualizar-capacit
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgCircleProgressModule.forRoot({ })
+    NgCircleProgressModule.forRoot({ }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

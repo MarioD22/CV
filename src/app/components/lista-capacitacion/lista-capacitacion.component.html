@@ -8,17 +8,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let u of Capacitaciones"><!--es el arreglo declarado en el lista de personas.ts-->
-                <!-- declaro la variable "u" creo un blucle for que recorre el arreglo Personas-->
-            <!-- {{}} Es interpolación para acceder a los campos -->
+        <tr *ngFor = "let u of Capacitaciones">
             <td>{{u.id}}</td>
             <td>{{u.nombre}}</td>
-            <td>{{u.lugar}}</td>
-            <button>Eliminar</button>          
-            <button >Editar</button>
+            <td>{{u.lugar}}</td>  
+           
+
+            <button (click) = "updateUser(u.id)" class = "btn btn-info"> Editar</button>
+            <button (click) = "deleteUser(u.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
         </tr>
     </tbody>
 </table>
+
+
 
   
   
