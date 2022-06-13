@@ -24,7 +24,8 @@ export class CrearCapacitacionComponent implements OnInit {
   }
 
 
-
+   //metodo del formulario de carga de capacitaciones//
+   
   onSubmitForm(){
    
    this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe( 
@@ -35,7 +36,9 @@ export class CrearCapacitacionComponent implements OnInit {
     error => console.log(error));    
    
   }
+  
 
+  
   redirectUserList(){
     this.router.navigate(['/home']);
   }

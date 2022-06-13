@@ -26,9 +26,10 @@ export class ActualizarCapacitacionComponent implements OnInit {
    }
   
 
+   // cuando carga la pagina trae la id del listado para modificar//
    
  ngOnInit(): void {   
-   this.id = parseInt(this.activatedRoute.snapshot.params['id']);   
+  this.id = parseInt(this.activatedRoute.snapshot.params['id']);   
     console.log("este es la ide que viene del listado de capacitacion>>" + this.id);
      this.capaservice.getCapacitacionById(+this.id).subscribe
      (data => {
@@ -40,6 +41,10 @@ export class ActualizarCapacitacionComponent implements OnInit {
  
  //Metodo referenciado por el forumulario HTML
  onSubmitForm(){
+  
+ 
+
+
    this.capaservice.updateCapacitacion(this.id,this.capacitacion).subscribe( 
      Data =>{
        console.log("actualizacion" + Data);
@@ -49,7 +54,7 @@ export class ActualizarCapacitacionComponent implements OnInit {
  }
 
  
- //Redirección a lista de capacitaciones
+ //Redirección a lista de capacitaciones a HOME
  redirectUserList(){
    this.router.navigate(['']);
  }
