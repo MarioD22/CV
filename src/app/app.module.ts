@@ -21,6 +21,7 @@ import { CrearCapacitacionComponent } from './components/crear-capacitacion/crea
 import { FormsModule} from '@angular/forms';
 import { ListaCapacitacionComponent } from './components/lista-capacitacion/lista-capacitacion.component';
 import { ActualizarCapacitacionComponent } from './components/actualizar-capacitacion/actualizar-capacitacion.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ActualizarCapacitacionComponent } from './components/actualizar-capacit
     CrearCapacitacionComponent,
     LoginComponent,
     ListaCapacitacionComponent,
-    ActualizarCapacitacionComponent    
+    ActualizarCapacitacionComponent,
+    HomeComponent    
   ],
   imports: [
     

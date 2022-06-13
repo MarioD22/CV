@@ -5,12 +5,17 @@ import { ListaPersonasComponent } from './components/lista-personas/lista-person
 import { CrearCapacitacionComponent } from './components/crear-capacitacion/crear-capacitacion.component';
 import { ListaCapacitacionComponent } from './components/lista-capacitacion/lista-capacitacion.component';
 import { ActualizarCapacitacionComponent } from './components/actualizar-capacitacion/actualizar-capacitacion.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
+  {path:'', component:HomeComponent},
+  {path:'home',component:HomeComponent},
+  {path:'login', component:LoginComponent},
   {path:'lista-capacitacion',component:ListaCapacitacionComponent },
   {path:'lista-personas', component: ListaPersonasComponent},
-  {path:'',redirectTo:'lista-capacitacion', pathMatch:'full' },
+  /*{path:'',redirectTo:'lista-capacitacion', pathMatch:'full' },*/
   {path:'crear-capacitacion', component:CrearCapacitacionComponent},
   {path: 'updatecapacitacion/:id', component:ActualizarCapacitacionComponent}
 ];

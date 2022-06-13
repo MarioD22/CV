@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { capacitacion } from 'src/app/capacitacion';
 import { CapacitacionService } from 'src/app/capacitacion.service';
@@ -11,10 +12,10 @@ import { CapacitacionService } from 'src/app/capacitacion.service';
 
 export class CrearCapacitacionComponent implements OnInit {
 
- 
+  
   nuevaCapacitacion: capacitacion = new capacitacion();
 
-  constructor(private capaService: CapacitacionService ,
+  constructor(private capaService: CapacitacionService , private router: Router
     ) { }
 
   
@@ -25,13 +26,20 @@ export class CrearCapacitacionComponent implements OnInit {
 
 
   onSubmitForm(){
-    this.saveCapacitacion();
+   
+   this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe( 
+    Data =>{
+      console.log("Se creo el usuario " + Data);
+      this.redirectUserList();
+    }, 
+    error => console.log(error));    
+   
   }
 
-  saveCapacitacion(){
-    this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe(data =>console.log(data));
-    
-  }  
+  redirectUserList(){
+    this.router.navigate(['/home']);
+  }
+ 
 
 
 }

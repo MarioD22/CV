@@ -49,9 +49,9 @@ export class ActualizarCapacitacionComponent implements OnInit {
  }
 
  
- //Redirección a lista de usuarios
+ //Redirección a lista de capacitaciones
  redirectUserList(){
-   this.router.navigate(['/lista-capacitacion']);
+   this.router.navigate(['']);
  }
 
   
