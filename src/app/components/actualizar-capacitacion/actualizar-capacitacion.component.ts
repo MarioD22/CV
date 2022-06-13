@@ -28,13 +28,13 @@ export class ActualizarCapacitacionComponent implements OnInit {
 
    
  ngOnInit(): void {   
-   this.id = parseInt(this.activatedRoute.snapshot.params['ide']);   
+   this.id = parseInt(this.activatedRoute.snapshot.params['id']);   
     console.log("este es la ide que viene del listado de capacitacion>>" + this.id);
      this.capaservice.getCapacitacionById(+this.id).subscribe
      (data => {
      this.capacitacion = data;
      
-     },error => console.error("no carga ide"));    
+     },error => console.error("no carga id"));    
    
  }
  

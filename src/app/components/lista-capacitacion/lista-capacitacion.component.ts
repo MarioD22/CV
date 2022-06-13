@@ -30,10 +30,10 @@ export class ListaCapacitacionComponent implements OnInit {
        
   }
   
-  updateUser(ide: number){
+  updateUser(id: number){
     //Lo envía a través de app-routing.module.ts
-    console.log("id Nº "+ ide +" Redirigiendo a actualizar capacitacion");
-    this.router.navigate(['updatecapacitacion',ide])
+    console.log("id Nº "+ id +" Redirigiendo a actualizar capacitacion");
+    this.router.navigate(['updatecapacitacion',id])
     
   }
 
