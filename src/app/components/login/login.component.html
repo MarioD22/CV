@@ -9,9 +9,12 @@
   
       <!-- Login Form -->
       <form>
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-        <input (click)="aparece()"   type="submit" class="fadeIn fourth" value="Entrar">
+        
+        <input type="text"  [(ngModel)]="usuario" id="login" class="fadeIn second" name="login" placeholder="ingrese su usuario">
+        <input type="password" [(ngModel)]="pass" id="password" class="fadeIn third" name="login" placeholder="ingrese su contraseña">
+        
+      
+        <input  (click)="aparece()"   type="submit" class="fadeIn fourth" value="Entrar">
       </form>
   
       <!-- Remind Passowrd -->
@@ -20,4 +23,13 @@
       </div>
   
     </div>
+  </div>
+
+
+  <div>
+   <p *ngIf="!mostrar" >
+     ES VISIBLE!!
+   </p>
+
+
   </div>

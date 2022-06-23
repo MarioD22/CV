@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 
 
@@ -11,14 +13,29 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  usuario:string="";
+
+  pass:string="";
+
+  mostrar: boolean = true;
+
+
+  constructor(private route:Router,
+               ) { }
 
   ngOnInit(): void {
   }
 
   aparece(){
-       
+       if ((this.usuario==="admin") && (this.pass==="1234")) {
+        console.log("usuario logueado"+this.usuario+" "+this.pass );
+        this.mostrar=false;
        this.route.navigate(['/home']);
+       
+        
+       } else
+        { console.log("error de logueo")
+      }
     }
 
 
