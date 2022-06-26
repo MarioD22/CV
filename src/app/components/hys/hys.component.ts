@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { hys } from 'src/app/hys';
+import { HysService } from 'src/app/hys.service';
 
 @Component({
   selector: 'app-hys',
@@ -7,9 +10,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HysComponent implements OnInit {
 
-  constructor() { }
+ //creo la variable Hys del tipo hys para traer un arreglo con todas las Hard and soft skill//
+  Hys : hys[];
 
-  ngOnInit(): void {
+  constructor( private hysservice : HysService,
+    private router: Router) { }
+
+  ngOnInit(): void { 
+    this.getHys();
   }
+
+  private getHys(){
+    this.hysservice.findallhys().subscribe(data=>{this.Hys=data;});
+    
+  }
+  
+  updateHys(id: number){
+    //Lo envía a través de app-routing.module.ts
+    console.log("id Nº "+ id +" Redirigiendo a actualizar capacitacion");
+    this.router.navigate(['updatecapacitacion',id])
+    
+  }
+
+
+  deleteUser(id: number){
+    this.hysservice.deleteHys(id).subscribe( 
+      Data => {
+      console.log(Data);
+      this.getHys();
+    })
+
+}
+  
+
+
+
+
+
+
 
 }

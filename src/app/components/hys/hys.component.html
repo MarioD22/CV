@@ -96,3 +96,23 @@
                 [animation]="true" 
                 [animationDuration]="300"
 -->
+
+
+<div *ngFor = "let u of Hys" class="text-center col-sm-4 col-md-4 col-lg-4">
+    <h2>{{u.nombre}}</h2>
+        <circle-progress
+        [percent]= "{{u.percent}}"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [animation]="true"
+        [animationDuration]="300"
+        ></circle-progress>
+
+        <button (click) = "updateHys(u.id)" class = "btn btn-info"> Editar</button>
+        <button (click) = "deleteHys(u.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete </button>
+
+
+</div>
