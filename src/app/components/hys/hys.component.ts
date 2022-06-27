@@ -27,13 +27,13 @@ export class HysComponent implements OnInit {
   
   updateHys(id: number){
     //Lo envía a través de app-routing.module.ts
-    console.log("id Nº "+ id +" Redirigiendo a actualizar capacitacion");
-    this.router.navigate(['updatecapacitacion',id])
+    console.log("id Nº "+ id +" Redirigiendo a actualizar Hard and soft skill");
+    this.router.navigate(['updatehys',id])
     
   }
 
 
-  deleteUser(id: number){
+  deleteHys(id: number){
     this.hysservice.deleteHys(id).subscribe( 
       Data => {
       console.log(Data);

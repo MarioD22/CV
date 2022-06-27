@@ -1,0 +1,22 @@
+<div class="col-sm-6 offset-sm-3">
+    <h3>Agregar  Hard and soft skill</h3>
+    
+    <form (ngSubmit) = "onSubmitForm()">
+        
+        <div class="form-group">
+            <label> Nombre Hard and soft skill</label>
+            <input type="text" class ="form-control" id = "nombre"        
+                [(ngModel)] = "nuevaHys.nombre" name = "nombre">
+        </div>
+    
+        <div class="form-group">
+            <label> percent</label>
+            <input type="text" class ="form-control" id = "percent"
+            [(ngModel)] = "nuevaHys.percent" name = "percent">
+        </div>
+       
+        <button class = "btn btn-success" type ="submit"  >Guardar</button>
+    
+    </form>
+    </div> 
+    

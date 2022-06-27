@@ -41,10 +41,6 @@ export class ActualizarCapacitacionComponent implements OnInit {
  
  //Metodo referenciado por el forumulario HTML
  onSubmitForm(){
-  
- 
-
-
    this.capaservice.updateCapacitacion(this.id,this.capacitacion).subscribe( 
      Data =>{
        console.log("actualizacion" + Data);

@@ -1,0 +1,23 @@
+<div class="col-sm-6 offset-sm-3">
+    <h3> Actualizar Hard and soft skill </h3>
+     <h2> nombre  </h2>
+    <form (ngSubmit) = "onSubmitForm()">
+    
+        <div class="form-group">
+            <label> Nombre</label>
+            <input type="text" class ="form-control" id = "nombre"
+                [(ngModel)] = "Hys.nombre" name = "nombre">
+        </div>
+    
+        <div class="form-group">
+            <label> Percent </label>
+            <input type="text" class ="form-control" id = "percent"
+                [(ngModel)] = "Hys.percent" name = "percent ">
+        </div>
+            
+    
+        <button class = "btn btn-success" type ="submit">Actualizar</button>
+    
+    </form>
+</div> 
+

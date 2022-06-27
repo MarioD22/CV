@@ -7,6 +7,7 @@ import { ListaCapacitacionComponent } from './components/lista-capacitacion/list
 import { ActualizarCapacitacionComponent } from './components/actualizar-capacitacion/actualizar-capacitacion.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { ActualizarHysComponent } from './components/actualizar-hys/actualizar-hys.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'lista-personas', component: ListaPersonasComponent},
   /*{path:'',redirectTo:'lista-capacitacion', pathMatch:'full' },*/
   {path:'crear-capacitacion', component:CrearCapacitacionComponent},
-  {path: 'updatecapacitacion/:id', component:ActualizarCapacitacionComponent}
+  {path: 'updatecapacitacion/:id', component:ActualizarCapacitacionComponent},
+  {path:'updatehys/:id', component:ActualizarHysComponent}
 ];
 
 

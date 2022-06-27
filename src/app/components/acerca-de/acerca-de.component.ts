@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcercaDeComponent implements OnInit {
 
+ presentacion: string = "Tengo 38 años, actualmente me encuentro en búsqueda laboral";
+
+ mostrar: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
