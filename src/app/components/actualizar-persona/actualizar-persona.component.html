@@ -1,0 +1,35 @@
+<div class="col-sm-6 offset-sm-3">
+    <h3> Actualizar Info Personal </h3>
+     <h2> nombre  </h2>
+    <form (ngSubmit) = "onSubmitForm()">
+    
+        <div class="form-group">
+            <label> Nombre</label>
+            <input type="text" class ="form-control" id = "nombre"
+                [(ngModel)] = "perfi.nombre" name = "nombre">
+        </div>
+    
+        <div class="form-group">
+            <label> apellido </label>
+            <input type="text" class ="form-control" id = "apellido"
+                [(ngModel)] = "perfi.apellido" name = "apellido ">
+        </div>
+
+        <div class="form-group">
+            <label> edad </label>
+            <input type="text" class ="form-control" id = "edad"
+                [(ngModel)] = "perfi.edad" name = "edad ">
+        </div>
+            
+        <div class="form-group">
+            <label> mail </label>
+            <input type="text" class ="form-control" id = "mail"
+                [(ngModel)] = "perfi.mail" name = "mail">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Actualizar</button>
+    
+    </form>
+</div> 
+
+

@@ -20,7 +20,7 @@ con la clase img-fluid las imagenes se vuelven resposives es decir que se adapta
 
    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
            <div >
-               <p id="nombre">Mario Daniel Cena</p>
+               <p id="nombre">{{perfil.nombre}} {{perfil.apellido}}</p>
                <p>Futuro Full Stack Development Jr</p>
           </div>
    </div>
@@ -29,8 +29,8 @@ con la clase img-fluid las imagenes se vuelven resposives es decir que se adapta
      <div >
          <span>
                 <h1>Acerca de Mi</h1>
-            <p>
-                Tengo 38 años, actualmente me encuentro en búsqueda laboral.
+            <p > 
+                Tengo {{perfil.edad}} años, actualmente me encuentro en búsqueda laboral.
                 Administrativo con más de 10 años de experiencia, a lo largo de mi carrera
                  he pasado por todo tipo de organizaciones: gestionando, planificando, atendiendo y
                 realizando tareas administrativas, de soporte y de apoyo a cualquier empresa.<br>
@@ -38,21 +38,9 @@ con la clase img-fluid las imagenes se vuelven resposives es decir que se adapta
                 departamento de la empresa.
               </p>
          </span>
+
     </div>
 
-    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-        <div >
-           
-               <p *ngIf="!mostrar" id:mm>
-                  presentacion.text
-                 </p>
-            
-       </div>
-
-
-
-
-
-
-
+  
+<button (click) = "updatePerfil(1)" class = "btn btn-info"> Editar</button>
 </div>

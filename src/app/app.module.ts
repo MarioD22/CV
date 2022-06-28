@@ -24,6 +24,7 @@ import { ActualizarCapacitacionComponent } from './components/actualizar-capacit
 import { HomeComponent } from './components/home/home.component';
 import { CrearHysComponent } from './components/crear-hys/crear-hys.component';
 import { ActualizarHysComponent } from './components/actualizar-hys/actualizar-hys.component';
+import { ActualizarPersonaComponent } from './components/actualizar-persona/actualizar-persona.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ActualizarHysComponent } from './components/actualizar-hys/actualizar-h
     ActualizarCapacitacionComponent,
     HomeComponent,
     CrearHysComponent,
-    ActualizarHysComponent    
+    ActualizarHysComponent,
+    ActualizarPersonaComponent    
   ],
   imports: [
     

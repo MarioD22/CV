@@ -21,9 +21,21 @@ export class PersonaService {
     //HttpClient para proporcionar métodos que reciben datos del backend
     private httpClient: HttpClient  ){ }
 
-    findAllUsers(): Observable<Persona[]>{
-      return this.httpClient.get<Persona[]>(`${this.backendURL}`);
+    getPerfil(): Observable<Persona>{
+      return this.httpClient.get<Persona>(this.backendURL+'/traer/perfil');
     }
+/*
+    public getPersona():Observable<persona>{
+      return this.http.get<persona>(this.URL+'personas/traer/perfil');
+    }*/
+
+findAllUsers(): Observable<Persona[]>{
+      return this.httpClient.get<Persona[]>(`${this.backendURL}`);
+    } 
+
+
+  
+   
 
     
   getUserById(id: number): Observable<Persona>{
