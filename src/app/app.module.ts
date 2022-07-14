@@ -25,6 +25,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CrearHysComponent } from './components/crear-hys/crear-hys.component';
 import { ActualizarHysComponent } from './components/actualizar-hys/actualizar-hys.component';
 import { ActualizarPersonaComponent } from './components/actualizar-persona/actualizar-persona.component';
+import { interceptorProvider } from './interceptor-service';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import { ActualizarPersonaComponent } from './components/actualizar-persona/actu
     NgCircleProgressModule.forRoot({ }),
     
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

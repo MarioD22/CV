@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
 import { Persona } from 'src/app/persona';
 import { PersonaService } from 'src/app/persona.service';
+import { TokenService } from 'src/app/token.service';
 
 @Component({
   selector: 'app-logo-ap',
@@ -11,24 +12,47 @@ import { PersonaService } from 'src/app/persona.service';
 })
 
 export class LogoAPComponent implements OnInit {
+  /*jwt*/
+  isLogged = false;
+  /**** */
 
-  perfil : Persona = new Persona();
-  
-  
-  constructor(private route:Router, private perfilService:PersonaService) { }
+
+  perfil: Persona = new Persona();
+
+
+  constructor(private route: Router,
+    private perfilService: PersonaService,
+
+    private tokenService : TokenService
+  ) { }
 
   ngOnInit(): void {
+  /*jwt*/
+  if(this.tokenService.getToken()){
+    this.isLogged=true;
+  }else {
+     this.isLogged=false;
+  }
+  /*_____ */
+  
     this.buscarPerfil();
+    
+  }
+/*jwt*/
+onLogOut() : void{
+  this.tokenService.logOut();
+  window.location.reload();
+}
+
+/*------- */
+
+  buscarPerfil() {
+    this.perfilService.getPerfil().subscribe(data => { this.perfil = data });
+
+
   }
 
-
-  buscarPerfil(){
-   this.perfilService.getPerfil().subscribe(data =>{this.perfil=data});
-   
-    
-   }
-
-  login(){
+  login() {
     this.route.navigate(['/login'])
   }
 
