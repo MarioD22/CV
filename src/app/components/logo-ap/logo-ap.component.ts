@@ -18,7 +18,7 @@ export class LogoAPComponent implements OnInit {
 
 
   perfil: Persona = new Persona();
-
+  usuario:string;
 
   constructor(private route: Router,
     private perfilService: PersonaService,
@@ -30,6 +30,7 @@ export class LogoAPComponent implements OnInit {
   /*jwt*/
   if(this.tokenService.getToken()){
     this.isLogged=true;
+    this.usuario=this.tokenService.getUserName();
   }else {
      this.isLogged=false;
   }

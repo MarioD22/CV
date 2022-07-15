@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ActualizarHysComponent } from './components/actualizar-hys/actualizar-hys.component';
 import { ActualizarPersonaComponent } from './components/actualizar-persona/actualizar-persona.component';
+import { CrearHysComponent } from './components/crear-hys/crear-hys.component';
 
 
 const routes: Routes = [
@@ -19,9 +20,11 @@ const routes: Routes = [
   {path:'lista-personas', component: ListaPersonasComponent},
   /*{path:'',redirectTo:'lista-capacitacion', pathMatch:'full' },*/
   {path:'crear-capacitacion', component:CrearCapacitacionComponent},
+  {path:'crear-hys', component: CrearHysComponent},
   {path: 'updatecapacitacion/:id', component:ActualizarCapacitacionComponent},
   {path:'updatehys/:id', component:ActualizarHysComponent},
   {path:'updateperfil/:id',component:ActualizarPersonaComponent}
+
 ];
 
 

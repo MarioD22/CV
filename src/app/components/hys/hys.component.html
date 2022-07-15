@@ -1,115 +1,35 @@
 <div class="row">
     <h1> Hard and soft skill </h1>
-    
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <h2>WINDOWS</h2>
-            <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="300"
-            ></circle-progress>
+      <br>
+        <div class="col-xs-12 col-lg-12">
+            <button type="button" class="btn btn-dark" routerLink="/crear-hys" *ngIf="isLogged">
+                crear -hys
+            </button>
+        </div>
+  <br>
+  <br>
+  <br>
+
+  
+  <div *ngFor="let u of Hys " class="text-center col-sm-4 col-md-4 col-lg-4">
+
+
+    <h2>{{u.nombre}}</h2>
+
+    <circle-progress [percent]=u.percent [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+    </circle-progress>
+    <br>
+    <button (click)="updateHys(u.id)" class="btn btn-info" *ngIf="isLogged"> Editar</button>
+    <button (click)="deleteHys(u.id)" class="btn btn-danger" style="margin-left: 10px" *ngIf="isLogged"> Borrar
+    </button>
+
+
+  </div>
 </div>
-
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <h2>WORD</h2>
-            <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="300"
-            ></circle-progress>
-</div>
-
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <h2>EXEL</h2>
-                <circle-progress
-                [percent]="90"
-                [radius]="100"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'"
-                [animation]="true"
-                [animationDuration]="300"
-                ></circle-progress>  
-        </div>       
-
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <h2>Empatía</h2>
-                <circle-progress
-                [percent]="75"
-                [radius]="100"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'"
-                [animation]="true"
-                [animationDuration]="300"
-                ></circle-progress>  
-        </div>       
-
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <h2>Trabajo en equipo</h2>
-                <circle-progress
-                [percent]="90"
-                [radius]="100"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'"
-                [animation]="true"
-                [animationDuration]="300"
-                ></circle-progress>  
-        </div>       
-
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <h2>Compañerismo</h2>
-                <circle-progress
-                [percent]="90"
-                [radius]="100"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'"
-                [animation]="true"
-                [animationDuration]="300"
-                ></circle-progress>  
-        </div>       
-
-        <div *ngFor = "let u of Hys " class="text-center col-sm-4 col-md-4 col-lg-4">
-            <h1>prueba skilss</h1>
-            <h2>{{u.nombre}}</h2>
-            
-                <circle-progress
-                [percent]=u.percent
-                [radius]="100"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'"
-                [animation]="true"
-                [animationDuration]="300"
-                ></circle-progress>
-        
-               <button (click) = "updateHys(u.id)" class = "btn btn-info"> Editar</button>
-                <button (click) = "deleteHys(u.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete </button>
-        
-        
-        </div>        
-
-<app-crear-hys>Crear skill/app-crear-hys>
-
 
 <!--
+
               text-center<< centra el circulo
                 [percent]="85"  porcentaje que muestra
                 [radius]="100" tamaño del circulo - valores con comillas dobles
@@ -121,5 +41,3 @@
                 [animation]="true" 
                 [animationDuration]="300"
 -->
-
-

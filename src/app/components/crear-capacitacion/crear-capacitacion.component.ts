@@ -30,8 +30,8 @@ export class CrearCapacitacionComponent implements OnInit {
    
    this.capaService.addCapacitacion(this.nuevaCapacitacion).subscribe( 
     Data =>{
-      console.log("Se creo el usuario " + Data);
-      this.redirectUserList();
+      console.log("Se creo el la nueva capacitacion " + Data);
+      this.redirectHome();
     }, 
     error => console.log(error));    
    
@@ -39,7 +39,7 @@ export class CrearCapacitacionComponent implements OnInit {
   
 
   
-  redirectUserList(){
+  redirectHome(){
     this.router.navigate(['/home']);
   }
  

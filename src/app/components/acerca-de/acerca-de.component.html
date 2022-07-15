@@ -42,5 +42,5 @@ con la clase img-fluid las imagenes se vuelven resposives es decir que se adapta
     </div>
 
   
-<button (click) = "updatePerfil(1)" class = "btn btn-info"> Editar</button>
+<button (click) = "updatePerfil(1)" class = "btn btn-info" *ngIf="isLogged" > Editar</button>
 </div>

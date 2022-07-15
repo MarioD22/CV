@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { hys } from 'src/app/hys';
 import { HysService } from 'src/app/hys.service';
+import { TokenService } from 'src/app/token.service';
 
 @Component({
   selector: 'app-hys',
@@ -14,11 +15,25 @@ export class HysComponent implements OnInit {
   Hys : hys[];
 
   constructor( private hysservice : HysService,
-    private router: Router) { }
+    private router: Router,
+    private tokenService: TokenService) { }
+
+
+    isLogged = false;
 
   ngOnInit(): void { 
     this.getHys();
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
+
   }
+
+  
 
   private getHys(){
     this.hysservice.findallhys().subscribe(data=>{this.Hys=data;});

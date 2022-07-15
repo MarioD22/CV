@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/persona';
 import { PersonaService } from 'src/app/persona.service';
+import { TokenService } from 'src/app/token.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -9,14 +10,28 @@ import { PersonaService } from 'src/app/persona.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+
  perfil: Persona;
  
-  
-
  
-  constructor(private perfiService:PersonaService, private router: Router) { }
+  constructor(private perfiService:PersonaService,
+     private router: Router,
+     private tokenService: TokenService) { }
+
+     isLogged = false;
 
   ngOnInit(): void {
+     this.getPerfil();
+
+     if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
+  }
+
+  private getPerfil(){
     this.perfiService.getPerfil().subscribe(data=>{this.perfil=data});
   }
 
