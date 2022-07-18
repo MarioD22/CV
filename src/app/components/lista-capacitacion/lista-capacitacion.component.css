@@ -1,0 +1,14 @@
+h2 {
+    color: rgb(44, 40, 40);
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+     
+}
+
+h2:hover { position: relative;
+  background-color: black;
+  border-radius: 10px;
+  color: rgb(230, 221, 221);
+  font-size: 45px;
+}  

@@ -6,6 +6,14 @@ h2 {
      
 }
 
+h2:hover { position: relative;
+  background-color: black;
+  border-radius: 10px;
+  color: rgb(230, 221, 221);
+  font-size: 45px;
+}  
+
+
 
 h3{ text-align: center;}   
 
@@ -19,3 +27,4 @@ p a { text-align:left;
 .row{
   width: 100%;
 } 
+
