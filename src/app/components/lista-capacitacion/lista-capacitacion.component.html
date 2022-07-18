@@ -21,8 +21,8 @@
         <td>{{u.lugar}}</td>
 
 
-        <button (click)="updateUser(u.id)" class="btn btn-info" *ngIf="isLogged"> Editar</button>
-        <button (click)="deleteUser(u.id)" class="btn btn-danger" style="margin-left: 10px" *ngIf="isLogged"> Borrar</button>
+        <button (click)="updateUser(u.id)" class="btn btn-info" *ngIf="isLogged"><i class="bi bi-pencil"></i> Editar</button>
+        <button (click)="deleteUser(u.id)" class="btn btn-danger" style="margin-left: 10px" *ngIf="isLogged"><i class="bi bi-trash"></i> Borrar</button>
       </tr>
     </tbody>
   </table>
