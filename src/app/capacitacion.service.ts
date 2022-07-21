@@ -9,8 +9,8 @@ import { capacitacion } from './capacitacion';
 export class CapacitacionService { 
 
 
-  private backendURL: string = "http://localhost:8080/api/v1/capacitacion";
- 
+  //private backendURL: string = "http://localhost:8080/api/v1/capacitacion";//
+  private backendURL: string = "https://murmuring-lake-19567.herokuapp.com/api/v1/capacitacion";
 
 
   
@@ -31,7 +31,8 @@ export class CapacitacionService {
 
  //POST
   public addCapacitacion( capacitacion:capacitacion): Observable<capacitacion>{ 
-    return this.httpClient.post<capacitacion>(`http://localhost:8080/api/v1/new/capacitacion`,capacitacion);
+    return this.httpClient.post<capacitacion>(`https://murmuring-lake-19567.herokuapp.com/api/v1/new/capacitacion`,capacitacion);
+    //return this.httpClient.post<capacitacion>(`http://localhost:8080/api/v1/new/capacitacion`,capacitacion);//
   } 
  
 

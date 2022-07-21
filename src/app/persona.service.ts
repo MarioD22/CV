@@ -12,7 +12,7 @@ export class PersonaService {
 
  
   
-  private backendURL: string = "http://localhost:8080/api/v1/persona";
+  private backendURL: string = "https://murmuring-lake-19567.herokuapp.com/api/v1/persona";
  
 
 

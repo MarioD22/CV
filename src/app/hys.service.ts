@@ -8,7 +8,7 @@ import { hys } from './hys';
 })
 export class HysService {
 
-  private backendURL: string = "http://localhost:8080/api/v1/";
+  private backendURL: string = "https://murmuring-lake-19567.herokuapp.com/api/v1/";
 
   constructor(//HttpClient para proporcionar métodos que reciben datos del backend
   private httpClient: HttpClient) { }
@@ -24,14 +24,14 @@ findallhys():Observable<hys[]>{
 //Buscar una habilidad>> http://localhost:8080/api/v1/hys/findById/2   
                         
 getHysByID( id:number):Observable<hys>{
-  return this.httpClient.get<hys>(`http://localhost:8080/api/v1/hys/findById/${id}`);
+  return this.httpClient.get<hys>(`https://murmuring-lake-19567.herokuapp.com/api/v1/hys/findById/${id}`);
 }
 
 
   //POST
   // crear una habilidad nueva>> http://localhost:8080/api/v1/new/hys  //
   createHys(hys:hys): Observable<Object>{
-    return this.httpClient.post(`http://localhost:8080/api/v1/new/hys`, hys);
+    return this.httpClient.post(`https://murmuring-lake-19567.herokuapp.com/api/v1/new/hys`, hys);
   }
 
   //PUT
