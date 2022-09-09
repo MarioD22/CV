@@ -1,4 +1,7 @@
-# CV
+# Proyecto Final del programa : Argentina Programa
+                 FRONT END 
+     Va junto el repositorio BackendJWT
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
